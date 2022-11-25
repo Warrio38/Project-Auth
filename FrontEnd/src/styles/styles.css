@@ -1,0 +1,236 @@
+/* Imports */
+
+@import "~normalize.css";
+@import "fonts.css";
+
+/* Variables */
+
+:root {
+  --background-color: #181818;
+  --hover-first-color: #1763c6;
+  --first-color: #1a73e8;
+  --hover-red-color: #c71919;
+  --red-color: #e81a1a;
+  --input-color: #80868b;
+  --border-color: #dadce0;
+  --body-font: "Roboto", sans-serif;
+  --normal-font-size: large;
+  --small-font-size: 1rem;
+  --very-small-font-size: 0.75rem;
+}
+
+/* Standard elements' styles*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+  background-color: var(--background-color);
+  color: whitesmoke;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Header-menu styles */
+
+.menu {
+  justify-content: space-between;
+  display: flex;
+  background-color: black;
+  height: 2rem;
+}
+.menu a:hover {
+  transition: 0.6s;
+  background-color: #474747;
+  border-radius: 15px;
+}
+#reg {
+  display: flex;
+}
+.menu a {
+  border-radius: 3px;
+  transition: 0.6s;
+  display: inline-block;
+  font-size: var(--normal-font-size);
+  padding: 6px;
+  text-decoration: none;
+  color: whitesmoke;
+}
+.container {
+  padding-top: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Registration & Login */
+
+.loadingDiv {
+  background: rgba(0, 0, 0, 0.52);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 100%;
+  z-index: 2;
+  transition: 1s;
+}
+.authReg {
+  font-size: medium;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.authReg input {
+  margin-top: 3px;
+  width: 300px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.authReg button {
+  margin-top: 3px;
+  width: 300px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.errDiv {
+  margin-bottom: 1.5rem;
+  color: red;
+}
+.succDiv {
+  margin-bottom: 1.5rem;
+  color: green;
+}
+
+/* Form */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.l-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 96vh;
+}
+.remember__label {
+  margin-right: auto;
+  text-align: center;
+  margin-left: 0.4rem;
+  padding-bottom: 0.3rem;
+}
+.form {
+  position: relative;
+  z-index: 0;
+  width: 360px;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
+}
+.form__check {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+  width: 1rem;
+  height: 1rem;
+}
+.form__title {
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+.form__div {
+  position: relative;
+  height: 48px;
+  margin-bottom: 1.5rem;
+}
+.form__input {
+  color: whitesmoke;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: var(--normal-font-size);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 1rem;
+  background: none;
+  z-index: 1;
+}
+.form__label {
+  position: relative;
+  z-index: 0;
+  left: 1rem;
+  top: 1rem;
+  padding: 0 0.25rem;
+  background-color: #181818;
+  color: var(--input-color);
+  font-size: var(--normal-font-size);
+  transition: 0.3s;
+}
+.form__button {
+  width: 12rem;
+  display: block;
+  margin: auto;
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  background-color: var(--first-color);
+  color: #fff;
+  font-size: var(--normal-font-size);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.form__button:hover {
+  background-color: var(--hover-first-color);
+}
+.signOut__button {
+  width: 12rem;
+  display: block;
+  margin: auto;
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  background-color: var(--red-color);
+  color: #fff;
+  font-size: var(--normal-font-size);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.signOut__button:hover {
+  background-color: var(--hover-red-color);
+}
+.form__input:focus + .form__label {
+  top: -0.5rem;
+  left: 0.8rem;
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  z-index: 10;
+}
+.form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
+  top: -0.5rem;
+  left: 0.8rem;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  z-index: 10;
+}
+.form__input:focus {
+  border: 1.5px solid var(--first-color);
+}
