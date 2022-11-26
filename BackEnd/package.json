@@ -1,7 +1,7 @@
 {
   "name": "backendcharproj",
   "version": "1.0.0",
-  "description": "Backend for Character Project",
+  "description": "Backend for Auth Project",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
